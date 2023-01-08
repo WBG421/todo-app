@@ -4,7 +4,8 @@ from helpers import open_todos, save_todos
 
 def main():
     t = time.strftime("%d %b %Y %H:%M:%S", time.localtime())
-    print("It is " + t) 
+    print("It is " + t)
+    print("Anything")
     while True:
         user_prompt = "You can add, complete, show, edit, wipe and exit: "
         user_action = input(user_prompt)
