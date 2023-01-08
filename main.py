@@ -8,6 +8,7 @@ def main():
     while True:
         user_prompt = "You can add, complete, show, edit, wipe and exit: "
         user_action = input(user_prompt)
+        print("Anything")
         if user_action.startswith("add"):
             todo = input("Enter a todo: ")
             todos = open_todos()
