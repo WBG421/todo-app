@@ -1,11 +1,10 @@
 import time
-from helpers import open_todos, save_todos
+from helpers import open_todos, write_todos
 
 
 def main():
     t = time.strftime("%d %b %Y %H:%M:%S", time.localtime())
     print("It is " + t)
-    print("Anything")
     while True:
         user_prompt = "You can add, complete, show, edit, wipe and exit: "
         user_action = input(user_prompt)
@@ -13,7 +12,7 @@ def main():
             todo = input("Enter a todo: ")
             todos = open_todos()
             todos.append(todo)
-            save_todos(todos)
+            write_todos(todos)
         elif user_action.startswith("complete"):
             todos = open_todos()
             while True:
@@ -28,7 +27,7 @@ def main():
                     pass
             removed_todo = todos[number - 1]
             todos.pop(number - 1)
-            save_todos(todos)
+            write_todos(todos)
             print(f"Removed {removed_todo} from the todos.")
         elif user_action.startswith("show"):
             todos = open_todos()
@@ -48,12 +47,12 @@ def main():
                     pass
             todo = input("What do you want to change it to? ")
             todos[number - 1] = todo
-            save_todos(todos)
+            write_todos(todos)
         elif user_action.startswith("exit"):
             break
         elif user_action.startswith("wipe"):
             todos = []
-            save_todos(todos)
+            write_todos(todos)
         else:
             print("Command is not valid")
 
