@@ -1,3 +1,5 @@
 breakfast
 clean
-dupa
+coffees
+work
+sleep
