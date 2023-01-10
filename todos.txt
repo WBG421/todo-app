@@ -1,5 +1,2 @@
-breakfast
 clean
-coffees
-work
-sleep
+call grandma
