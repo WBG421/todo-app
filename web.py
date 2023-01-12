@@ -1,6 +1,7 @@
 import streamlit as st
 from helpers import open_todos, write_todos
 
+
 def main():
     todos = open_todos()
 
@@ -19,13 +20,13 @@ def main():
                   placeholder="Add new todo...",
                   on_change=add_todo, key="new_todo")
 
-    st.session_state
 
 def add_todo():
     todo = st.session_state["new_todo"]
     todos = open_todos()
     todos.append(todo)
     write_todos(todos)
+
 
 if __name__ == "__main__":
     main()
